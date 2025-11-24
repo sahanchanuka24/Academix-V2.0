@@ -1,0 +1,164 @@
+/* SideBar Styles - Scoped to only affect this component */
+.sideBarContainerNav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #461fb000;
+}
+
+.sideBarNavbarWrapper {
+  flex-shrink: 0;
+}
+
+.sideBarNav {
+  width: 240px;
+  height: calc(100vh - 80px); /* Adjust based on navbar height */
+  background: rgba(33, 15, 55, 0);
+  border-right: 1px solid rgba(0, 0, 0, 0.114);
+  padding: 1.5rem 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0);
+  overflow-y: auto;
+  position: fixed;
+  top: 80px; /* Match navbar height */
+  left: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+}
+
+.sideBarNavItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.sideBarNavItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #1f54b0;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.sideBarNavItem:hover {
+  background: #1f54b0;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.sideBarNavItem:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #1f54b0;
+  border-radius: 2px;
+}
+
+.sideBarNavItemActive {
+  background: #1f54b0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.sideBarNavItemActive::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #1f54b0;
+  border-radius: 2px;
+}
+
+.sideBarNavItemActive .sideBarNavIcon {
+  color: #ffffff;
+}
+
+.sideBarNavIcon {
+  color: #1f54b0;
+  transition: all 0.3s ease;
+}
+
+.sideBarNavItem:hover .sideBarNavIcon {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Divider */
+.sideBarDivider {
+  height: 1px;
+  background: #00000021;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+/* Sign Out Button */
+.sideBarSignOut {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #1f54b0;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  margin-top: auto;
+  background: #1f54b000;
+  border: #1f54b0 1px solid;
+}
+
+.sideBarSignOut:hover {
+  background: #1f54b0;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.sideBarSignOut:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #1f54b0;
+  border-radius: 2px;
+}
+
+.sideBarSignOut:hover .sideBarNavIcon {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Scrollbar Styling */
+.sideBarNav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sideBarNav::-webkit-scrollbar-track {
+  background: rgba(33, 15, 55, 0.5);
+}
+
+.sideBarNav::-webkit-scrollbar-thumb {
+  background: #1f54b0;
+  border-radius: 3px;
+}
+
+.sideBarNav::-webkit-scrollbar-thumb:hover {
+  background: #1f54b0;
+}

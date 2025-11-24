@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  padding-top: 80px; /* nav bar height */
+}
+
+.sidebarWrapper {
+  width: 40px; /* side bar width */
+  flex-shrink: 0;
+}
+
+.contentSection {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  margin-left: 260px; /* side bar width */
+  min-height: calc(100vh - 80px); /* full height minus nav bar */
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(31, 84, 176, 0.1);
+  border: 1px solid rgba(31, 84, 176, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f54b0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.input,
+.textarea,
+.select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #0000001e;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #000000b9;
+  font-family: sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 5px #1f54b0;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #1f54b0, #1f54b0);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 3px 6px rgba(124, 69, 133, 0.3);
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #032766, #032766);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding-top: 70px; /* mobile nav bar height */
+  }
+  .sidebarWrapper {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  .contentSection {
+    margin-left: 0;
+    padding: 1rem;
+    min-height: auto;
+  }
+  .formContainer {
+    padding: 1rem;
+  }
+}

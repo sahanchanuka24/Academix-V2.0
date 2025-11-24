@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  padding-top: 80px; /* nav bar height */
+}
+
+.sidebarWrapper {
+  width: 40px; /* side bar width */
+  flex-shrink: 0;
+}
+
+.contentSection {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  margin-left: 260px; /* side bar width */
+  min-height: calc(100vh - 80px); /* full height minus nav bar */
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(31, 84, 176, 0.1);
+  border: 1px solid rgba(31, 84, 176, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f54b0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: medium;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.input,
+.textarea,
+.select {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(31, 84, 176, 0.2);
+  border-radius: 10px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+  background: rgba(31, 84, 176, 0.02);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  outline: none;
+  border-color: #1f54b0;
+  box-shadow: 0 0 0 3px rgba(31, 84, 176, 0.15);
+  background: white;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  background:#1f54b0;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 3px 6px rgba(124, 69, 133, 0.3);
+}
+
+.button:hover {
+  background: #316fda;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding-top: 70px; /* mobile nav bar height */
+  }
+  .sidebarWrapper {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  .contentSection {
+    margin-left: 0;
+    padding: 1rem;
+    min-height: auto;
+  }
+  .formContainer {
+    padding: 1rem;
+  }
+}

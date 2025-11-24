@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "id": "2AuAiUwF9vt13E_JUGMpi",
+      "fullname": "sahan ",
+      "email": "sahanchanuka90@gmail.com",
+      "password": "$2b$10$mO5.0XvjrHQqXbLsA4cJfeNfh7Yvyxf8H5ca.1iFIi5Ho1S7GmVxW",
+      "phone": "0773900340",
+      "skills": [
+        "h",
+        "h"
+      ],
+      "following": [],
+      "followers": [],
+      "createdAt": "2025-11-24T12:47:13.417Z"
+    },
+    {
+      "id": "eflKj9Ya4fvEohhKMxFct",
+      "fullname": "Test User",
+      "email": "test@example.com",
+      "password": "$2b$10$MNx8005Mll6GQcQihMbiYO6OegSGGARxavd5AvcjedsgDLt6KUHUi",
+      "phone": "1234567890",
+      "skills": [
+        "JS",
+        "React"
+      ],
+      "following": [],
+      "followers": [],
+      "createdAt": "2025-11-24T12:51:05.123Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "jaZw5rqZ0mQUbR0Kb4Ulp",
+      "userID": "2AuAiUwF9vt13E_JUGMpi",
+      "title": "x",
+      "description": "x",
+      "media": [
+        "/uploads/1763988714185-E0QR3X.jpeg"
+      ],
+      "likes": {
+        "2AuAiUwF9vt13E_JUGMpi": true
+      },
+      "comments": [
+        {
+          "id": "34ah9ck9w9YedwzPprBp8",
+          "userID": "2AuAiUwF9vt13E_JUGMpi",
+          "userFullName": "sahan ",
+          "content": "kgj",
+          "createdAt": "2025-11-24T12:52:13.781Z",
+          "updatedAt": "2025-11-24T12:52:22.472Z"
+        }
+      ],
+      "createdAt": "2025-11-24T12:51:54.188Z",
+      "updatedAt": "2025-11-24T12:52:13.781Z"
+    },
+    {
+      "id": "IcesDFU_Gs4Chv7czAe4I",
+      "userID": "eflKj9Ya4fvEohhKMxFct",
+      "title": "Hello",
+      "description": "World",
+      "media": [],
+      "likes": {},
+      "comments": [],
+      "createdAt": "2025-11-24T12:52:06.587Z",
+      "updatedAt": "2025-11-24T12:52:06.587Z"
+    }
+  ],
+  "learningProgress": [
+    {
+      "id": "HOb6RCqzSpBgP0hhLDxnX",
+      "skillTitle": "Python Programming",
+      "description": "Need to learn python for my research",
+      "field": "Programming Language",
+      "startDate": "2025-11-24",
+      "endDate": "2025-11-30",
+      "level": "",
+      "postOwnerID": "2AuAiUwF9vt13E_JUGMpi",
+      "postOwnerName": "sahan Chanuka",
+      "createdAt": "2025-11-24T12:49:39.718Z",
+      "updatedAt": "2025-11-24T12:49:39.718Z"
+    }
+  ],
+  "learningResources": [
+    {
+      "id": "6FqYl77Ls00wrUy6OtSnx",
+      "title": "React full course for beginers",
+      "description": "This is the full react course. A-Z ",
+      "contentURL": "https://www.youtube.com/watch?v=gweRTS7nSj4&list=RDoGW7-IuIND4&index=9",
+      "tags": [
+        "React",
+        "beginer"
+      ],
+      "postOwnerID": "2AuAiUwF9vt13E_JUGMpi",
+      "postOwnerName": "sahan Chanuka",
+      "likes": {},
+      "createdAt": "2025-11-24T12:48:26.582Z",
+      "updatedAt": "2025-11-24T12:49:06.112Z"
+    }
+  ],
+  "notifications": []
+}

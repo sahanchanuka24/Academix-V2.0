@@ -1,0 +1,446 @@
+/* Modern Navbar Component */
+.navbar-component {
+  background: linear-gradient(135deg, #1f54b0 0%, #1f54b0 100%);
+  padding: 0 2.5rem;
+  height: 80px;
+  box-shadow: 0 4px 20px rgba(125, 69, 133, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(201, 87, 146, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Logo Styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Right Section with Icons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+/* Icons Container */
+.navbar-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  margin-left: auto;
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: all 0.3s ease;
+}
+
+/* Icon Container */
+.navbar-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 8px;
+}
+
+/* Icon Styles */
+.navbar-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  color: #ffffff;
+  background: rgba(201, 87, 146, 0); /* subtle background */
+  border: 1px solid rgba(201, 87, 146, 0); /* subtle border */
+  border-radius: 8px; /* smaller rounding */
+  
+  box-shadow: 0 1px 4px rgba(125, 69, 133, 0.05); /* softer shadow */
+
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-icon:hover {
+  background: rgba(201, 87, 146, 0);
+  border-color: rgba(201, 87, 146, 0);
+  box-shadow: 0 2px 6px rgba(126, 69, 133, 0);
+}
+
+
+.navbar-icon svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-icon:hover {
+  transform: translateY(-2px);
+  /* Removed color, background, border-color, and box-shadow changes */
+}
+
+
+.navbar-icon:hover svg {
+  transform: scale(1.1);
+}
+
+.navbar-icon.active {
+  background: #c9579200;
+  color: #ffffff;
+  border-color: #c9579200;
+}
+
+.navbar-icon.active:hover {
+  background: #b84d8300;
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #7C4585;
+  color: #C95792;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid #C95792;
+  box-shadow: 0 2px 4px rgba(124, 69, 133, 0.2);
+}
+
+/* User Avatar Styles */
+.navbar-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #C95792;
+  color: #7C4585;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(201, 87, 146, 0.3);
+}
+
+.navbar-avatar:hover {
+  transform: scale(1.05);
+  border-color: #C95792;
+}
+
+/* Dropdown Menu */
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #7C4585;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  min-width: 220px;
+  padding: 0.75rem 0;
+  margin-top: 0.75rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+  border: 1px solid rgba(201, 87, 146, 0.2);
+}
+
+.navbar-dropdown:hover .navbar-dropdown-menu,
+.navbar-dropdown:focus-within .navbar-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Items */
+.navbar-dropdown-item {
+  padding: 0.75rem 1.25rem;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.navbar-dropdown-item:hover {
+  background-color: rgba(201, 87, 146, 0.2);
+  color: #C95792;
+}
+
+.navbar-dropdown-item svg {
+  width: 18px;
+  height: 18px;
+  color: #C95792;
+}
+
+/* Card Info Icons */
+.navbar-card-field svg {
+  color: #C95792;
+  background: rgba(201, 87, 146, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-card-field:hover svg {
+  background: rgba(201, 87, 146, 0.2);
+  transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar-component {
+    padding: 0 1rem;
+    height: 70px;
+  }
+
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar-logo img:hover {
+    transform: scale(1.05);
+  }
+
+  .navbar-items {
+    gap: 1rem;
+  }
+
+  .navbar-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navbar-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .notification-badge {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+  }
+}
+
+/* Accessibility Focus Styles */
+.navbar-icon:focus-visible,
+.navbar-avatar:focus-visible {
+  outline: 2px solid #C95792;
+  outline-offset: 2px;
+}
+
+.navbar-user-card {
+  position: absolute;
+  top: 90px;
+  right: 2rem;
+  background: linear-gradient(135deg, #1f54b0 0%, #4f83db 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  overflow: hidden;
+  z-index: 1001;
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-card-content {
+  padding: 1.5rem;
+}
+
+.navbar-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.navbar-card-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #1f54b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid rgba(201, 87, 146, 0);
+}
+
+.navbar-card-titles {
+  flex: 1;
+}
+
+.navbar-card-titles h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.navbar-card-titles p {
+  color: #ffffff;
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+}
+
+.navbar-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navbar-card-field {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.595);
+}
+
+.navbar-card-field:hover {
+  background: #1f54b0;
+}
+
+.navbar-card-field-content {
+  flex: 1;
+}
+
+.navbar-card-field-label {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.navbar-card-field-value {
+  color: #ffffffcf;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.navbar-card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-update-btn {
+  flex: 1;
+  padding: 0.85rem;
+  background: #ffffff00;
+  color: #1f54b0;
+  border: 1px solid #1f54b0;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(201, 87, 146, 0);
+}
+
+.navbar-update-btn:hover {
+  background: #1f54b0;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.navbar-delete-btn {
+  flex: 1;
+  padding: 0.85rem;
+  background: rgba(255, 82, 82, 0);
+  color: #FF5252;
+  border: 1px solid rgb(255, 82, 82);
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.navbar-delete-btn:hover {
+  background: rgb(245, 33, 33);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .navbar-user-card {
+    right: 1rem;
+    width: calc(100% - 2rem);
+  }
+}
